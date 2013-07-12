@@ -29,14 +29,14 @@ class XmlController extends AppController{
 		
 		$smtp = Mail::factory('smtp',
 		 array (
-		 'host' 	=> "mail.df8.com.br",
+		 'host' 	=> "mail.XXX.com.br",
 		 'auth' 	=> true,
-		 'username' => "no-reply@df8.com.br",
+		 'username' => "no-reply@XXX.com.br",
 		 'password' => "noreply.123",
 		 'port'		=> 587
 		));
 		$headers = array (
-		 'From' 	=> "no-reply@df8.com.br",
+		 'From' 	=> "no-reply@XXX.com.br",
 		 'To' 		=> MAIL_LOG,
 		 'Subject' 	=> "Int.Gaia - XML ".date("d/m/y")
 		);
@@ -72,7 +72,7 @@ class XmlController extends AppController{
 	}
 	
 	/*
-	 * Verifica se o novo XML é igual ao antigo, e o prepara para processamento
+	 * Verifica se o novo XML ï¿½ igual ao antigo, e o prepara para processamento
 	 * */
 	function checkLastNew($cliente){
 		
